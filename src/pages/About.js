@@ -21,7 +21,7 @@ const About = () => {
       </p>
 
       
-      <h3>Technologies Used:</h3>
+      <h3 className="tech">Technologies Used:</h3>
       <ul>
         <li>React.js</li>
         <li>JavaScript (ES6+)</li>

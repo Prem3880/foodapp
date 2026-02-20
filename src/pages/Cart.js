@@ -1,7 +1,5 @@
-import CartItem from "../components/CartItem";
-
 const Cart = ({ cart, increaseQty, decreaseQty, removeItem }) => {
-  // Calculate total price
+  
   const totalPrice = cart.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
@@ -17,22 +15,33 @@ const Cart = ({ cart, increaseQty, decreaseQty, removeItem }) => {
         <div className="cart-items">
           {cart.map((item) => (
             <div className="cart-item" key={item.id}>
-              {/* Food image */}
-              <img src={item.image} alt={item.name} />
+              
+              {}
+              <img
+                src={item.image}
+                alt={item.name}
+                style={{
+                  width: "80px",
+                  height: "80px",
+                  borderRadius: "10px",
+                  objectFit: "cover",
+                  marginRight: "10px"
+                }}
+              />
 
-              {/* Item details */}
+              {}
               <div className="cart-item-details">
                 <h3>{item.name}</h3>
                 <p>Price: ₹{item.price}</p>
 
-                {/* Quantity controls */}
+                {}
                 <div className="quantity-controls">
                   <button onClick={() => decreaseQty(item.id)}>-</button>
                   <span>{item.quantity}</span>
                   <button onClick={() => increaseQty(item.id)}>+</button>
                 </div>
 
-                {/* Remove button */}
+                {}
                 <button
                   className="remove-btn"
                   onClick={() => removeItem(item.id)}
@@ -43,8 +52,10 @@ const Cart = ({ cart, increaseQty, decreaseQty, removeItem }) => {
             </div>
           ))}
 
-          {/* Total Price */}
-          <h3>Total: ₹{totalPrice}</h3>
+          {}
+          <h3 style={{ textAlign: "left" }}>
+            Total: ₹{totalPrice}
+          </h3>
         </div>
       )}
     </div>
