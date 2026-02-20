@@ -1,5 +1,6 @@
 const Cart = ({ cart, increaseQty, decreaseQty, removeItem }) => {
   
+  
   const totalPrice = cart.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
