@@ -60,7 +60,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Navbar cart={cart} />
       <Routes>
         <Route path="/" element={<Home addToCart={addToCart} />} />

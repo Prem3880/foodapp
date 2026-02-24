@@ -1,6 +1,7 @@
 import { useState } from "react";
 import foodData from "../data/foodData";
 import FoodCard from "../components/FoodCard";
+import Footer from "../components/Footer";
 
 const Home = ({ addToCart }) => {
   const [search, setSearch] = useState("");
@@ -52,6 +53,7 @@ const Home = ({ addToCart }) => {
           <FoodCard key={item.id} item={item} addToCart={addToCart} />
         ))}
       </div>
+      <Footer />
     </div>
   );
 };
