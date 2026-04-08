@@ -38,21 +38,7 @@ const About = () => {
         responsive web application built using <strong>React.js</strong>.
       </p>
 
-      <p>
-        Users can browse different food items, filter by category (Veg, Non-Veg,
-        Dessert, Drinks), search for food, sort by price, and add items to the
-        cart.
-      </p>
-
-      <p>
-        The cart updates dynamically, shows total price, and persists using{' '}
-        <strong>localStorage</strong>.
-      </p>
-
-      <p>
-        This project was developed by <strong>prem</strong> as part of my
-        React.js learning and fresher portfolio projects.
-      </p>
+      
     </div>
   );
 };
